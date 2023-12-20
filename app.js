@@ -11,8 +11,9 @@ const home = document.querySelector('#home');
 
 home.addEventListener('click', (e) => {
     e.preventDefault();
-    window.location.href = 'index.html';
-    console.log('about.html clicked');
+    let home = 'index.html';
+    window.location.href = home;
+    
 });
 aboutUs.addEventListener('click', (e) => {
     e.preventDefault();
@@ -46,8 +47,8 @@ function sendMail(){
         message: document.getElementById('message').value,
     };
 
-    const serviceId = "service_pkj606o";
-    const templateId = "template_9qy512l";
+    const serviceId = "service_07ucsby";
+    const templateId = "template_zrrbt3k"; 
 
     emailjs.send(serviceId, templateId, params)
     .then((respond) =>{
